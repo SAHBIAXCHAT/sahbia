@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade-in Next Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background-color: #f0f0f0;
+        }
+
+        #nextButton {
+            opacity: 0; /* Initially invisible */
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 1s ease; /* Smooth fade-in effect */
+        }
+
+        #nextButton:hover {
+            background-color: #45a049;
+        }
+
+        .visible {
+            opacity: 1; /* Make button visible */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Page</h1>
+    <p>The "Next" button will appear after 10 seconds with a fade-in effect.</p>
+
+    <button id="nextButton" onclick="alert('Next button clicked!')">Next</button>
+
+    <script>
+        // Wait 10 seconds, then show the button with fade-in
+        setTimeout(function() {
+            document.getElementById('nextButton').classList.add('visible');
+        }, 10000); // 10000 milliseconds = 10 seconds
+    </script>
+
+</body>
+</html>
